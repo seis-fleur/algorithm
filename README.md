@@ -1,3 +1,3 @@
 # algorithm
 
-#### implementation of common searching and sorting algorithms
+#### implementation of common searching and sorting algorithms in C++ 
