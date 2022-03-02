@@ -12,7 +12,7 @@ int main()
     string number;
     
     ifstream infile;
-    infile.open("insertion_test.txt");
+    infile.open("insertion_test.in");
 
     getline (infile, input_list);
     stringstream ss(input_list);
@@ -28,17 +28,8 @@ int main()
     for (double i : v)
         cout<<i<<"\t";
     cout<<endl;
-    for (int i = 1; i < v.size(); i++)
+    for (int i = 1; i <= v.size(); i++)
     {
-        elem = v[i];
-        int j = i - 1;
-
-        while (elem < v[j] && j >=0)
-        {
-            v[j+1] = v[j];
-            --j;
-        }
-        v[j+1] = elem;
         cout << i;
         switch (i)
         {
@@ -51,6 +42,16 @@ int main()
         for (double x : v)
             cout<<x<<"\t";
         cout<<endl;
+        elem = v[i];
+        int j = i - 1;
+
+        while (elem < v[j] && j >=0)
+        {
+            v[j+1] = v[j];
+            --j;
+        }
+        v[j+1] = elem;
+        
     }
     
     return 0;
