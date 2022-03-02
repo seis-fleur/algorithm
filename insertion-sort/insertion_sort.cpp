@@ -24,6 +24,10 @@ int main()
 
     int lastSortedIndex = 0;
     double elem;
+    cout<<"Unsorted List: \t";
+    for (double i : v)
+        cout<<i<<"\t";
+    cout<<endl;
     for (int i = 1; i < v.size(); i++)
     {
         elem = v[i];
@@ -35,9 +39,19 @@ int main()
             --j;
         }
         v[j+1] = elem;
+        cout << i;
+        switch (i)
+        {
+            case 1: cout << "st"; break;
+            case 2: cout << "nd"; break;
+            case 3: cout << "rd"; break;
+            default: cout<< "th"; break;
+        }
+        cout<<" pass: \t";
+        for (double x : v)
+            cout<<x<<"\t";
+        cout<<endl;
     }
-    cout << "arranged list: ";
-    for (double x : v)
-            cout<<x<<" ";
+    
     return 0;
 }
